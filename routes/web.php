@@ -3,7 +3,7 @@
 Route::get('/', 'ItemController@index');
 // ユーザー登録
 Auth::routes();
-// アイテムを詳細ページに表示
+// アイテム詳細ページにアイテムを表示
 Route::get('/item/{item}', 'ItemController@show');
 // カートのアイテムを送る
 Route::post('/cartitem', 'CartItemController@store');
