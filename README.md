@@ -21,6 +21,7 @@ https://tsue-shop.herokuapp.com/
 
 # Author
 * 津江明秀
-* Docker: Laradock
+* PHP: 7.1.23
 * Laravel:  5.8.35
+* Docker: Laradock
 * PostgreSQL
