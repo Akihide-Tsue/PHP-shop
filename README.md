@@ -19,6 +19,9 @@ https://tsue-shop.herokuapp.com/
 # Transition diagram
 ![遷移図](https://user-images.githubusercontent.com/56462284/70971197-bedc6000-20e3-11ea-859a-9cc349c37701.png)
 
+# Database
+![ER図](https://user-images.githubusercontent.com/56462284/71060036-c402e300-21a7-11ea-87ef-52a0aab5bdb0.png)
+
 # Author
 * 津江明秀
 * PHP: 7.1.23
