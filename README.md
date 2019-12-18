@@ -3,8 +3,9 @@ Ruby on railsを学んで約3ヶ月経ちました。
 津江がポートフォリオとしてphpでECサイトを作成しました。
 
 # DEMO
-* こちらからアクセスできます。
-* https://php-shopping.herokuapp.com/  
+* こちらからアクセスできます。  
+https://php-shopping.herokuapp.com/  
+  
   
 [![Image from Gyazo](https://i.gyazo.com/379ef3278ae7fe627cabd7a1061d028b.gif)](https://gyazo.com/379ef3278ae7fe627cabd7a1061d028b)
 
