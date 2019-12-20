@@ -8,7 +8,7 @@ Ruby on railsを学んで約3ヶ月経ちまして、
 https://php-shopping.herokuapp.com/  
   
   
-[![Image from Gyazo](https://i.gyazo.com/379ef3278ae7fe627cabd7a1061d028b.gif)]
+![Image from Gyazo](https://i.gyazo.com/379ef3278ae7fe627cabd7a1061d028b.gif)
 
 # Features(機能一覧)
 * 商品一覧表示
