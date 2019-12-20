@@ -10,15 +10,18 @@
 
     <div class="container">
         <div class="row justify-content-left">
+        <!-- each文でitem出す -->
             @foreach ($items as $item)
             <div class="col-md-4 mb-2">
                 <div class="card">
                 <div class="card-header">
+                <!-- views/item/index.blade.php へのaタグ -->
                         <a href="/item/{{ $item->id }}">{{ $item->name }}</a>
                     </div>
                     <div class="card-body">
                         {{ $item->amount }}円
                     </div>
+                    <!-- @auth ログイン中のみ表示 -->
                     @auth
                         <form method="POST" action="cartitem" class="form-inline m-1">
                             {{ csrf_field() }}
@@ -38,6 +41,7 @@
             @endforeach
         </div>
         <div class="row justify-content-center">
+        <!-- 検索機能時、ページまたがって検索keyword引き継ぐ -->
             {{ $items->appends(['keyword' => Request::get('keyword')])->links() }}
         </div>
     </div>

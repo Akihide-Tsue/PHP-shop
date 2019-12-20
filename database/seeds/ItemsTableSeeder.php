@@ -9,6 +9,7 @@ class ItemsTableSeeder extends Seeder
      */
     public function run()
     {
+        // DatabaseSeedに表示するよう書かないと本番環境で機能せず
         DB::table('items')->delete();
         $item_seeds = [
             [

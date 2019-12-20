@@ -17,8 +17,11 @@ class CartItemController extends Controller
 
     public function index()
     {
+        // データの全てから、商品名と価格を指定
         $cartitems = CartItem::select('cart_items.*', 'items.name', 'items.amount')
+        // ユーザーIDをキーにしてカート内の商品を検索
             ->where('user_id', Auth::id())
+            // テーブルを結合
             ->join('items', 'items.id','=','cart_items.item_id')
             ->get();
         // 単価計算
@@ -26,6 +29,7 @@ class CartItemController extends Controller
         foreach($cartitems as $cartitem){
             $subtotal += $cartitem->amount * $cartitem->quantity;
         }
+        // 小計をビューに渡す
         return view('cartitem/index', ['cartitems' => $cartitems, 'subtotal' => $subtotal]);
     }
   
@@ -48,6 +52,7 @@ class CartItemController extends Controller
 
     public function store(Request $request)
     {
+        // レコードの登録と更新を両方する
         CartItem::updateOrCreate(
             [
                 'user_id' => Auth::id(),

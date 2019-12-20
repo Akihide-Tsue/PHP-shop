@@ -36,6 +36,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+                <!-- 検索フォーム追加、keywordをitemConへ -->
                 <form method="GET" action="/">
                     <input type="text" name="keyword">
                     <input type="submit" value="商品検索">
@@ -62,6 +63,7 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                        <!-- 未ログイン時は表示されない -->
                         @else
                             <li class="nav-item">
                                 <a href="/cartitem" class="nav-link">
@@ -75,8 +77,8 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 

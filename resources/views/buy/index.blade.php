@@ -35,6 +35,7 @@
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="region">都道府県</label>
+                                    <!-- 選択 config/region.phpから読み込む -->
                                     @if(Request::has('confirm'))
                                         <p class="form-control-static">{{ old('region') }}</p>
                                         <input id="region" type="hidden" name="region" value="{{ old('region') }}">

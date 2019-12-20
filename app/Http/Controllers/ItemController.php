@@ -20,8 +20,10 @@ class ItemController extends Controller
             $items = Item::where('name', 'like', '%'.$request->get('keyword').'%')->paginate(15);
         }
         else{
+            // 15アイテムずつページネーション機能
             $items = Item::paginate(15);
         }
+        // viewに['items' => $items]わたす
         return view('item/index', ['items' => $items]);
     }
 

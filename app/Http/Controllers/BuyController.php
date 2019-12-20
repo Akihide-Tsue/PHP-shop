@@ -13,6 +13,7 @@ class BuyController extends Controller
 {
     public function index()
     {
+        // CartItemConと一緒
         $cartitems = CartItem::select('cart_items.*', 'items.name', 'items.amount')
             ->where('user_id', Auth::id())
             ->join('items', 'items.id','=','cart_items.item_id')
@@ -29,6 +30,7 @@ class BuyController extends Controller
         if( $request->has('post') ){
             // MailクラスとBuyクラスを使ってメールを送信する
             Mail::to(Auth::user()->email)->send(new Buy());
+            // 完了したらカート中身は消す
             CartItem::where('user_id', Auth::id())->delete();
             return view('buy/complete');
         }
